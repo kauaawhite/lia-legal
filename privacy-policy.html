@@ -94,6 +94,8 @@
   your password (stored only as a one-way hash) live in Firebase Authentication; our room server does not store your
   email. Other people can find you by username, and see your name, username and photo in the rooms you are in. They
   never see your email or your account id: inside a room you appear under a random code.</p>
+<p>Google-signed-in users of builds with Set LIA password can choose to add a separate LIA email/password sign-in after a recent Google login. The verified account email is fixed. The password is sent directly over HTTPS to Firebase Authentication, not our room server, and is not saved on the phone by this flow. The same account and Google sign-in remain available; this does not change the Google password. Existing LIA passwords can be reset through Forgot Password. A successful reset request does not guarantee inbox delivery; check the correct account email and spam folder.</p>
+
 <h3 id="rooms">Voice rooms, invitations and share links</h3>
 <p>When you join a voice room, your microphone audio is sent live to the other people in that room through
   <strong>LiveKit</strong>, a real-time audio service. LIA does <strong>not record</strong> room audio and keeps no
