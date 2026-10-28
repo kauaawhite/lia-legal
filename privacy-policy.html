@@ -133,7 +133,7 @@
   mode, to translate it). The text is typed into the app you are using. LIA does not keep the audio or the text and
   does not read other things you type on any keyboard.</p>
 <h3 id="updates">Update notices</h3>
-<p>Personal builds with Updates check version metadata on our own server, while signed in, at most once per day automatically or when you tap About &gt; Updates. The check uses your existing Firebase authentication token to restrict access. We do not save it as a tracking or activity event, and do not send device model, installation ID, chat contents or contact data for update checks. Notices never install or download an APK, force an update or block other app features. An offline check fails without affecting the app.</p>
+<p>Personal builds with Updates check version metadata on our own server, while signed in, at most once per day automatically or when you tap About &gt; Updates. The check uses your existing Firebase authentication token to restrict access. We do not save it as a tracking or activity event, and do not send device model, installation ID, chat contents or contact data for update checks. Notices never automatically download or install an APK, force an update or block other app features. If you tap Update for an available release, the signed-in app requests a one-use download link valid for two minutes, then opens your browser. You choose whether to download and manually install. A temporary account-ID/link-hash record controls the download; it expires after two minutes and is removed on use or scheduled cleanup. APK assets are not served through unauthenticated public links. A person who receives your temporary link before you use it may use it during that short lifetime, so do not share it. An offline check fails without affecting the app.</p>
 <h3>What we do <em>not</em> do</h3>
 <ul>
 <li>We do not use advertising or analytics SDKs of any kind in LIA, or custom activity tracking.</li>
@@ -158,7 +158,7 @@
   circumstances.</p>
 <h2 id="storage">3. Where your data lives</h2><p>Pending push deliveries are queued for retry for at most 24 hours (up to five tries); rate-limit counters and request-id records are short-lived. Expired rooms are closed by a scheduled server cleanup. Ended room records are removed after 30 days.</p>
 <p>Your LIA account profile, voice rooms and invitations are stored on our server (Cloudflare D1, reached through our Cloudflare Worker). Room audio is not stored anywhere. Ended rooms are erased after 30 days, invitations expire after
-  24 hours, and your profile stays until you delete your account (section 7).</p>
+  24 hours, and your profile stays until you delete your account (section 6).</p>
 <h2 id="permissions">4. Android permissions LIA requests</h2>
 <table>
 <tr><th>Permission</th><th>Edition</th><th>What it's for</th></tr>
