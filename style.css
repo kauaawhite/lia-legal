@@ -59,3 +59,13 @@ footer a { color: var(--text-tertiary); }
 }
 .flavor-tag.direct { background: rgba(63,224,208,0.15); color: var(--success); }
 .flavor-tag.play { background: rgba(255,181,71,0.15); color: var(--accent); }
+
+/* Keep long service domains and tables inside a narrow phone screen. */
+body { overflow-wrap: anywhere; }
+table { table-layout: fixed; }
+@media (max-width: 520px) {
+  .wrap { padding: 28px 16px 52px; }
+  h1 { font-size: 26px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 5px; }
+             }
